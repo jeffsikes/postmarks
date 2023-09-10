@@ -6,3 +6,4 @@ node_modules
 .sqlite_history
 *.patch
 request_logs.txt
+account.json.example
