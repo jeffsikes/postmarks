@@ -56,4 +56,6 @@ Pointing to public Portainer IP and the PORT above.
 Create SSL certificate
 Again, I had some type of issue with postmarks.box464.com, maybe because I tried it so many times? Had to give up on that domain.
 
+Create a Dockerfile (see Dockerfile in root)
+
 Noticed that webfinger doesn't work - Cloudflare? Not sure.
