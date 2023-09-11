@@ -26,7 +26,7 @@ try {
 
 export const actorInfo = actorFileData;
 export const account = actorInfo.username || "bookmarks";
-export const domain = "postmarks.box464.com"; // edit this if you have a custom domain
+export const domain = "bookmarks.box464.com"; // edit this if you have a custom domain
 
 export function timeSince(ms) {
   var timestamp = new Date(ms);
