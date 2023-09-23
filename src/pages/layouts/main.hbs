@@ -4,6 +4,9 @@
     <meta charset="utf-8" />
     <link rel="icon" href="https://glitch.com/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {{#if (mastodonAccount) }}
+    <link rel="me" href="{{ mastodonAccount }}" />
+    {{/if}}
     {{{feedLink}}}
 
     <title>{{title}} | {{siteName}}</title>
@@ -13,6 +16,7 @@
 
     <!-- Import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/custom_style.css" />
 
   </head>
 
@@ -24,6 +28,7 @@
       </div>
       <div class="menu">
         <a href="/about">About</a>
+        <a href="/search">Search</a>
         {{#if loggedIn}}
           <a href="/network">Network</a>
           <a href="/bookmark/new">Add</a>
@@ -47,6 +52,8 @@
     <a href="/">Home</a>
     <span class="divider">|</span>
     <a href="/about">About</a>
+    <span class="divider">|</span>
+    <a href="/search">Search</a>
     <span class="divider">|</span>
     {{#if loggedIn}}
     <a href="/network">Network</a>

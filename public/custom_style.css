@@ -1,0 +1,11 @@
+:root {
+    --color-bg: #a8c69f;
+    --color-text-main: #000000;
+    --color-primary: #d7f5ef;
+    --wrapper-height: 40vh;
+    --image-max-width: 300px;
+    --image-margin: 3rem;
+    --font-family: "Public Sans", sans-serif;
+    --font-family-header: "Public Sans", sans-serif;    
+}
+
