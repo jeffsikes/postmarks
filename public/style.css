@@ -8,14 +8,14 @@ to this section's matching END comment to see page-specific styles.
 ******************************************************************************/
 
 @font-face {
-  font-family: 'Public Sans';
-  src: url('/PublicSans-VariableFont_wght.ttf');
+  font-family: "Public Sans";
+  src: url("/PublicSans-VariableFont_wght.ttf");
 }
 
 @font-face {
-  font-family: 'Public Sans';
+  font-family: "Public Sans";
   font-style: italic;
-  src: url('/PublicSans-Italic-VariableFont_wght.ttf');
+  src: url("/PublicSans-Italic-VariableFont_wght.ttf");
 }
 
 /* Our default values set as CSS variables */
@@ -334,11 +334,11 @@ textarea {
 }
 
 #taggedList .tagged:before {
-  content: '#';
+  content: "#";
 }
 
 #taggedList .tagged:hover:before {
-  content: '\00d7';
+  content: "\00d7";
 }
 
 .followers .follower {
