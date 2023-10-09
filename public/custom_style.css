@@ -1,11 +1,9 @@
 :root {
-    --color-bg: #a8c69f;
-    --color-text-main: #000000;
-    --color-primary: #d7f5ef;
-    --wrapper-height: 40vh;
-    --image-max-width: 300px;
-    --image-margin: 3rem;
-    --font-family: "Public Sans", sans-serif;
-    --font-family-header: "Public Sans", sans-serif;    
+    --font-family: 'Arial', sans-serif;
+    --font-size: 16px;
+    --color-background: #e0e0e0; 
+    --color-foreground: #333333;
+    --color-accent: #4caf50;
+    --color-link: #2196f3;
+    --color-dimmed: #9e9e9e;  
 }
-
