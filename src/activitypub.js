@@ -38,7 +38,7 @@ export function createNoteObject(bookmark, account, domain) {
     ?.split(' ')
     .map((tag) => {
       const tagName = tag.slice(1);
-      return `<a href="https://${domain}/tagged/${tagName}" class="mention hashtag" rel="tag nofollow noopener noreferrer" target="_blank">${tag}<</a>`;
+      return `<a href="https://${domain}/tagged/${tagName}" class="mention hashtag">${tag}</a>`;
     })
     .join(' ');
 
@@ -56,7 +56,7 @@ export function createNoteObject(bookmark, account, domain) {
     tag: [],
   };
 
-  updatedBookmark.tags?.split(' ').forEach((tag) => {
+  bookmark.tags?.split(' ').forEach((tag) => {
     const tagName = tag.slice(1);
     noteMessage.tag.push({
       type: 'Hashtag',
