@@ -38,7 +38,7 @@ export function createNoteObject(bookmark, account, domain) {
     ?.split(' ')
     .map((tag) => {
       const tagName = tag.slice(1);
-      return `<a href="https://${domain}/tagged/${tagName}" class="mention hashtag" rel="tag nofollow noopener noreferrer" target="_blank">${tag}<</a>`;
+      return `<a href="https://${domain}/tagged/${tagName}" class="mention hashtag" rel="tag nofollow noopener noreferrer">${tag}<</a>`;
     })
     .join(' ');
 
@@ -52,7 +52,7 @@ export function createNoteObject(bookmark, account, domain) {
     type: 'Note',
     published: d.toISOString(),
     attributedTo: `https://${domain}/u/${account}`,
-    content: `<p><strong><a href="${updatedBookmark.url}" rel="nofollow noopener noreferrer" target="_blank">${replaceEmptyText(
+    content: `<p><strong><a href="${updatedBookmark.url}" rel="nofollow noopener noreferrer">${replaceEmptyText(
       updatedBookmark.title,
       updatedBookmark.url,
     )}</a></strong><br/>${updatedBookmark.description?.trim().replace('\n', '<br/>') || ''}</p>${linkedTags}`,
