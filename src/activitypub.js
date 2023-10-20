@@ -34,7 +34,7 @@ export function createNoteObject(bookmark, account, domain) {
   updatedBookmark.title = escapeHTML(bookmark.title);
   updatedBookmark.description = escapeHTML(bookmark.description);
 
-  const linkedTags = bookmark.tags
+  let linkedTags = bookmark.tags
     ?.split(' ')
     .map((tag) => {
       const tagName = tag.slice(1);
@@ -42,16 +42,20 @@ export function createNoteObject(bookmark, account, domain) {
     })
     .join(' ');
 
+  if (linkedTags?.trim().length > 0) {
+    linkedTags = `<p>${linkedTags}</p>`;
+  }
+
   const noteMessage = {
     '@context': 'https://www.w3.org/ns/activitystreams',
     id: `https://${domain}/m/${guidNote}`,
     type: 'Note',
     published: d.toISOString(),
     attributedTo: `https://${domain}/u/${account}`,
-    content: `<strong><a href="${updatedBookmark.url}" rel="nofollow noopener noreferrer" target="_blank">${replaceEmptyText(
+    content: `<p><strong><a href="${updatedBookmark.url}" rel="nofollow noopener noreferrer" target="_blank">${replaceEmptyText(
       updatedBookmark.title,
       updatedBookmark.url,
-    )}</a></strong><br/>${updatedBookmark.description?.trim().replace('\n', '<br/>') || ''}<p>${linkedTags}</p>`,
+    )}</a></strong><br/>${updatedBookmark.description?.trim().replace('\n', '<br/>') || ''}</p>${linkedTags}`,
     to: [`https://${domain}/u/${account}/followers/`, 'https://www.w3.org/ns/activitystreams#Public'],
     tag: [],
   };
