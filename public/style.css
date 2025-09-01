@@ -42,7 +42,7 @@ html {
   font-size: var(--font-size);
 }
 
-.btn-section{
+.btn-section {
   margin-left: auto;
   display: flex;
   gap: 8px;
@@ -76,7 +76,8 @@ html {
   background-color: #d0fff1;
 }
 
-.btn--github img, .btn--feed img{
+.btn--github img,
+.btn--feed img {
   width: 2rem;
   aspect-ratio: 1/1;
 }
@@ -88,7 +89,7 @@ html {
   padding: 1rem 0 0.75rem 0;
   width: 100%;
   flex-wrap: wrap;
-  border-top: .25rem solid #fff;
+  border-top: 0.25rem solid #fff;
   gap: 1rem;
 }
 
@@ -188,7 +189,7 @@ textarea {
   color: inherit;
   border: 1px solid currentColor;
   box-sizing: border-box;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   padding: calc(0.5rem - 1px) calc(1rem - 1px);
 }
 
@@ -222,7 +223,10 @@ h3 {
   margin-bottom: 1rem;
 }
 
-p, ol, ul, form {
+p,
+ol,
+ul,
+form {
   margin-bottom: 1rem;
 }
 
@@ -237,7 +241,7 @@ p.error a {
 .header {
   justify-content: space-between;
   align-items: center;
-  border-bottom: .25rem solid #fff;
+  border-bottom: 0.25rem solid #fff;
   padding: 1rem 0;
   margin-bottom: 2rem;
 }
@@ -262,7 +266,7 @@ p.error a {
 
 .logo img {
   display: inline-block;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   height: 6rem;
   width: auto;
   vertical-align: middle;
@@ -297,7 +301,7 @@ p.error a {
 }
 
 .bookmark .subhead {
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 2rem;
 }
 
@@ -316,7 +320,7 @@ p.error a {
   line-height: 1.25rem;
 }
 .comment .top .timestamp:before {
-  content: "• ";
+  content: '• ';
 }
 
 .comment .top a {
@@ -325,15 +329,15 @@ p.error a {
 }
 
 .comment .top .timestamp {
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .bookmark .bottom span ~ span:before {
-  content: "•";
+  content: '•';
 }
 
 .bookmark .tags {
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 2rem;
 }
 
@@ -362,7 +366,7 @@ p.error a {
 
 .tag-list a {
   color: var(--color-dimmed);
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
@@ -380,7 +384,7 @@ p.error a {
 
 #taggedList {
   display: flex;
-  gap: .25rem;
+  gap: 0.25rem;
 }
 
 #taggedList .tagged {
@@ -389,9 +393,9 @@ p.error a {
   grid-template-columns: 1.5ch auto;
   align-items: center;
   text-align: center;
-  padding: calc(.25rem - 1px);
+  padding: calc(0.25rem - 1px);
   border: 1px solid black;
-  border-radius: .5rem 0 0 .5rem;
+  border-radius: 0.5rem 0 0 0.5rem;
 }
 
 #taggedList .tagged:before {
@@ -417,7 +421,7 @@ a.bookmark-date {
 }
 
 .bookmark-date + .bookmark-domain:before {
-  content: "• ";
+  content: '• ';
 }
 
 .form-group:not(:last-child) {
@@ -434,12 +438,12 @@ a.bookmark-date {
 }
 
 .pagination {
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
 .pagination span + span:before {
-  content: " • ";
+  content: ' • ';
 }
 
 .pagination span:not(.status) {
@@ -454,7 +458,7 @@ a.bookmark-date {
   list-style: none;
   margin: 0 0 2rem;
   font-weight: bold;
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   color: var(--color-dimmed);
   order: 1;
@@ -470,12 +474,12 @@ a.bookmark-date {
 }
 
 .external-link {
-  font-size: .625em;
+  font-size: 0.625em;
   color: var(--color-dimmed);
 }
 
 .bookmark-date + .bookmark-domain:before {
-  content: "• ";
+  content: '• ';
 }
 
 .form-group:not(:last-child) {
@@ -492,7 +496,7 @@ a.bookmark-date {
 }
 
 .pagination span + span:before {
-  content: " • ";
+  content: ' • ';
 }
 
 .network-post {

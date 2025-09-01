@@ -14,7 +14,9 @@ export const data = {
 
 let actorFileData = {};
 try {
-  const accountFile = await readFile(new URL('../account.json', import.meta.url));
+  const accountFile = await readFile(
+    new URL("../account.json", import.meta.url)
+  );
   actorFileData = JSON.parse(accountFile);
   actorFileData.disabled = false;
 } catch (e) {

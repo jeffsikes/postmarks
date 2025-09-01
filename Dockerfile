@@ -9,5 +9,5 @@ COPY server.js /app/server.js
 COPY src /app/src
 
 RUN npm install
-EXPOSE 3000
+EXPOSE 3005
 ENTRYPOINT ["npm","run","start"]
