@@ -17,9 +17,10 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 app.use(express.static('public'));
+
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.json({ type: 'application/activity+json' }));
+app.use(express.json({ type: ['application/json', 'application/ld+json', 'application/activity+json'] }));
+
 app.use(session());
 
 app.use((req, res, next) => {
@@ -73,8 +74,8 @@ const hbs = create({
     projectUrl() {
       return `https://${app.get('domain')}`;
     },
-    glitchProjectName() {
-      return process.env.PROJECT_DOMAIN;
+    searchUrl() {
+      return `https://${app.get('domain')}/opensearch.xml`;
     },
     section(name, options) {
       if (!this._sections) this._sections = {};
@@ -125,5 +126,7 @@ app.use('/', routes.core);
 app.use('/api/inbox', cors(), routes.inbox);
 app.use('/.well-known/nodeinfo', routes.nodeinfo);
 app.use('/nodeinfo/2.0', routes.nodeinfo);
+app.use('/nodeinfo/2.1', routes.nodeinfo);
+app.use('/opensearch.xml', routes.opensearch);
 
 app.listen(PORT, () => console.log(`App listening on port ${PORT}`));

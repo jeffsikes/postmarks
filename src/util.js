@@ -5,6 +5,8 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
+export const dataDir = process.env.DATA_DIR || '.data';
+
 export const data = {
   errorMessage: 'Whoops! Error connecting to the database–please try again!',
   setupMessage: "🚧 Whoops! Looks like the database isn't setup yet! 🚧",
@@ -29,11 +31,8 @@ export const domain = (() => {
   if (process.env.PUBLIC_BASE_URL) {
     return process.env.PUBLIC_BASE_URL;
   }
-  if (process.env.PROJECT_DOMAIN) {
-    return `${process.env.PROJECT_DOMAIN}.glitch.me`;
-  }
 
-  console.log("didn't find a PUBLIC_BASE_URL or PROJECT_DOMAIN in env, assuming localhost");
+  console.log("didn't find a PUBLIC_BASE_URL in env, assuming localhost");
   return 'localhost';
 })();
 
