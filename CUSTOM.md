@@ -3,10 +3,6 @@
 - Decide on a custom domain
   @box464@bookmarks.box464.com
 
-- Make configuration changes
-  /src/util.js
-  `export const domain = "bookmarks.box464.com"; // edit this if you have a custom domain`
-
 /account.json (copied from /account.json.example)
 `{
   "username": "box464",
